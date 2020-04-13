@@ -5,4 +5,4 @@ from . models import Book
 class BookSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Book
-        fields = ('url', 'name', 'author', 'category', 'review')
+        fields = ('url', 'name', 'author', 'category', 'review', 'read')
