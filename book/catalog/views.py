@@ -1,16 +1,9 @@
-from django.shortcuts import render
 from rest_framework import viewsets, permissions
 from .models import Book
-from .serializers import BookSerializer, UserSerializer
-from django.contrib.auth.models import User
+from .serializers import BookSerializer
 
 
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all().order_by('-date_joined')
-    serializer_class = UserSerializer
-    permission_classes = [permissions.IsAuthenticated,]
-
-
+#General view to CRUD on book catalog
 class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookSerializer

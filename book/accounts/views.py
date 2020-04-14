@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 
 
+# Views about the accounts register....
 def IndexView(request):
     return render(request, 'index.html')
 
