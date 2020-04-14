@@ -2,27 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Auth System</title>
+    <title>Auth System | Book Catalog</title>
 </head>
 <body>
     {% block content %}
-        <h1>Welcome to Bruno's Book Catalog</h1>
-
-
-        {% if user.is_not_authenticated %}
-        {% else %}
-            <font size="-1">Sign-In or Sign-Up :)</font>
-        {% endif %}
-
-
-
-
+        <h1>Welcome to Our's Book Catalog</h1>
+        <font size="-0.5">This catalog is completely customizable, login <br />
+        or register yourself to put in some new books, update then,<br />
+         delete the bad ones, maybe add some nice reviews...<br />
+            and tell us if you read it too!
+        </font><br />
         {% if user.is_authenticated %}
             <a href="{% url 'logout' %}">Logout</a>
 
             {% else %}
-            <a href="{% url 'start' %}">Login</a>
+            <a href="{% url 'login_url' %}">Login</a>
             <a href="{% url 'register_url' %}">Register</a>
+        {% endif %}
+        {% if user.is_authenticated %}
+            <button onclick="window.location.href = 'http://127.0.0.1:8000/site/catalog/';">Access Book Catalog</button>
         {% endif %}
     {% endblock %}
 </body>
