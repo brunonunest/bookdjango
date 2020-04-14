@@ -15,6 +15,8 @@ Install requirements:
 -Django
 -Django Rest Framework
 
+Feel free to commit improves to the code...
+
 
 
 =)
