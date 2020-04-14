@@ -8,6 +8,10 @@ That's a catalog book app, features:
 -Only registred users can Write
 -Non-registred users can ReadOnly the catalog at: 
 
-Register at first page and follow on to access the catalog on: 
+Install requirements:
+-Django
+-Django Rest Framework
+
+
 
 =)
